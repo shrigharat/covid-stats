@@ -10,14 +10,15 @@ class App extends Component {
         this.state = {
             global: {},
             countries: [],
-            searchField: ''
+            searchField: '',
+            lastUpdated: ''
         }
     }
 
     async componentDidMount() {
         fetch('https://api.covid19api.com/summary')
             .then(data => data.json())
-            .then(data => this.setState({countries: data["Countries"], global: data["Global"]}))
+            .then(data => this.setState({countries: data["Countries"], global: data["Global"], lastUpdated: data["Date"]}))
     }
 
     render() {
@@ -28,6 +29,9 @@ class App extends Component {
         return (
             <div className="App">
                 <GlobalCase data={this.state.global}/>
+                <div className="last-updated-date">
+                    <h6>Last Updated : {this.state.lastUpdated}</h6>
+                </div>
                 <SearchBox
                     placeholder="search country"
                     handleChange={(e) => {this.setState({searchField: e.target.value})}}

@@ -6,3 +6,54 @@
     padding: 10px 5px;
     column-gap: 10px;
 }
+
+.row {
+    width: 100%;
+}
+
+.info-pane {
+    padding: 20px 10px;
+}
+
+.info-pane-header {
+    background-color: grey;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.close-btn {
+    border: 1px solid green;
+    border-radius: 25px;
+    outline: 0px solid white;
+    -webkit-appearance: none;
+    transform: translateZ(0);
+    transition: transform 0.3s ease-out;
+    margin: 10px;
+    color: green;
+}
+
+.close-btn:hover {
+    background-color: green;
+    color: white;
+    transform: scale(1.1);
+}
+
+.close-btn:focus{
+    outline: none;
+}
+
+.info-pane-country {
+    display: inline;
+}
+
+.table {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: black;
+}
