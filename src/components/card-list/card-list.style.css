@@ -13,6 +13,11 @@
     width: 100%;
 }
 
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
 .info-pane {
     padding: 20px 10px;
 }
