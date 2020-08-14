@@ -32,6 +32,7 @@ class App extends Component {
                 <div className="last-updated-date">
                     <h6>Last Updated : {this.state.lastUpdated}</h6>
                 </div>
+
                 <SearchBox
                     placeholder="Search Country"
                     handleChange={(e) => {this.setState({searchField: e.target.value})}}
